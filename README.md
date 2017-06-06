@@ -1,5 +1,7 @@
 # Backend
 
+[![Build Status](https://travis-ci.org/tribesat/backend.svg?branch=master)](https://travis-ci.org/tribesat/backend)
+
 Tribesat server
 
 ### Dependencies

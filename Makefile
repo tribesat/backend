@@ -1,10 +1,11 @@
+ifndef CI
 ifndef VIRTUAL_ENV
-	$(error Use virtualenv)
+	$(error Please use virtualenv)
+endif
 endif
 
 all:
 	pip install -r requirements.txt
-	export FLASK_APP = server.py
 
 test:
 	nosetests -v -s tests
