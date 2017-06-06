@@ -4,8 +4,17 @@ ifndef VIRTUAL_ENV
 endif
 endif
 
+PACKAGE_NAME := "backend"
+
 all:
 	pip install -r requirements.txt
 
 test:
-	nosetests -v -s tests
+	nosetests \
+		--verbose \
+		--nocapture \
+		--with-coverage \
+		--cover-tests \
+		--cover-erase \
+		--cover-package=$(PACKAGE_NAME) \
+		tests
