@@ -3,5 +3,7 @@ python:
     - 3.6
 install: make
 script: make test
+after_success: codecov --token=$CODECOV_TOKEN
 notifications:
     slack: tribesat:Oady1VjJpUgKI7pvF8ziCimW
+
