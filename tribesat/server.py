@@ -1,3 +1,4 @@
+
 """ Main entry point for tribesat backend
 """
 
@@ -12,4 +13,4 @@ def heartbeat() -> str:
         str: winky face `;)`
 
     """
-    return ';)'
+    return ";)"

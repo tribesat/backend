@@ -3,11 +3,13 @@
 
 import unittest
 
-from tribesat import server
+from tribesat.server import heartbeat
 
 class TestServer(unittest.TestCase):
+    """Server Tests
+    """
     def test_heartbeat(self):
         """Test heartbeat"""
-        response = server.heartbeat()
+        response = heartbeat()
         expected = ';)'
-        self.assertEquals(response, expected)
+        self.assertEqual(response, expected)

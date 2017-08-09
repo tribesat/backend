@@ -1,4 +1,6 @@
 #!/usr/bin/env python
+"""Server script
+"""
 
 from tribesat.server import app
 
