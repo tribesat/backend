@@ -9,7 +9,10 @@ PACKAGE_NAME := "tribesat"
 all:
 	pip install -r requirements.txt
 
-test:
+lint:
+	pylint tribesat
+
+unit-test:
 	nosetests \
 		--verbose \
 		--nocapture \
@@ -18,3 +21,9 @@ test:
 		--cover-erase \
 		--cover-package=$(PACKAGE_NAME) \
 		tests
+
+type-check:
+	mypy tribesat
+
+test:
+	make lint && make unit-test && make type-check
