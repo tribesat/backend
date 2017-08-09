@@ -5,3 +5,4 @@ coverage==4.4.1
 codecov==2.0.9
 pylint==1.7.2
 mypy==0.521
+yapf==0.16.3

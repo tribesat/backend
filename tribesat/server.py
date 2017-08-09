@@ -1,9 +1,9 @@
-
 """ Main entry point for tribesat backend
 """
 
-from flask import Flask # type: ignore
-app = Flask(__name__) # pylint: disable=invalid-name
+from flask import Flask  # type: ignore
+app = Flask(__name__)  # pylint: disable=invalid-name
+
 
 @app.route("/")
 def heartbeat() -> str:

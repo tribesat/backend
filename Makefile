@@ -9,6 +9,9 @@ PACKAGE_NAME := "tribesat"
 all:
 	pip install -r requirements.txt
 
+test:
+	make lint && make unit-test && make type-check && make style-review
+
 lint:
 	pylint tribesat
 
@@ -25,5 +28,15 @@ unit-test:
 type-check:
 	mypy tribesat
 
-test:
-	make lint && make unit-test && make type-check
+
+pretty:
+	yapf --in-place --recursive --parallel tribesat tests
+
+style-review:
+	@output="$$(yapf --parallel --diff --recursive nodelib tests)"; \
+	if [ -n "$$output" ]; then \
+		echo "$$output"; \
+		echo "run 'make pretty'"; \
+		exit 1; \
+	fi
+	@echo "Looks good"
