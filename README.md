@@ -1,6 +1,7 @@
 # Backend
 
-[![Build Status](https://travis-ci.org/tribesat/backend.svg?branch=master)](https://travis-ci.org/tribesat/backend)
+[![Build Status](https://travis-ci.org/tribesat/backend.svg?branch=master)](https://travis-ci.org/tribesat/backend) [![codecov](https://codecov.io/gh/tribesat/backend/branch/master/graph/badge.svg)](https://codecov.io/gh/tribesat/backend)
+
 
 Tribesat server
 
