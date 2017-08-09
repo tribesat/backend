@@ -4,7 +4,7 @@ ifndef VIRTUAL_ENV
 endif
 endif
 
-PACKAGE_NAME := "backend"
+PACKAGE_NAME := "tribesat"
 
 all:
 	pip install -r requirements.txt
