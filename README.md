@@ -17,7 +17,7 @@ Tribesat server
 virtualenv -p python3.6 .pyenv # create virtualenv
 source .pyenv/bin/activate     # activate virtualenv
 make                           # install requirements and set up environment
-flask run                      # start the server
+./bin/server                   # start the server
 ```
 
 ### Testing

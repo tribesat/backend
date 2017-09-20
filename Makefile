@@ -8,6 +8,7 @@ PACKAGE_NAME := "tribesat"
 
 all:
 	pip install -r requirements.txt
+	python setup.py install
 
 test:
 	make lint && make unit-test && make type-check && make style-review
