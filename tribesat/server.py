@@ -13,4 +13,8 @@ def heartbeat() -> str:
         str: winky face `;)`
 
     """
-    return ";)"
+    return "hello world"
+
+@app.route("/test_route")
+def test_route() -> str:
+    return "123"
