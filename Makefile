@@ -29,6 +29,8 @@ unit-test:
 type-check:
 	mypy tribesat
 
+setup-db:
+	./db/build.sh
 
 pretty:
 	yapf --in-place --recursive --parallel tribesat tests
