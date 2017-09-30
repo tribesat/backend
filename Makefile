@@ -1,6 +1,6 @@
 ifndef CI
 ifndef VIRTUAL_ENV
-	$(error Please use virtualenv)
+$(error Please use virtualenv)
 endif
 endif
 
