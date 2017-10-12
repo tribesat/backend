@@ -6,11 +6,17 @@ endif
 
 PACKAGE_NAME := "tribesat"
 
-all:
-	pip install -r requirements.txt
+all: requirements
 	python setup.py install
 
-test:
+develop: requirements
+	python setup.py develop
+
+.PHONY: requirements
+requirements:
+	pip install -r requirements.txt
+
+test: requirements
 	make lint && make unit-test && make type-check && make style-review
 
 lint:
