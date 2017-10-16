@@ -8,16 +8,36 @@ Tribesat server
 ### Dependencies
 
 - Python 3.6
-- virtualenv
-- nose
+- [virtualenv](https://virtualenv.pypa.io/en/stable/)
+- [PostgreSQL](https://www.postgresql.org/)
 
-### Running
+### Developing
+
+First time setup
 
 ```sh
 virtualenv -p python3.6 .pyenv # create virtualenv
 source .pyenv/bin/activate     # activate virtualenv
-make                           # install requirements and set up environment
+make develop                   # install requirements
 ./bin/server                   # start the server
+```
+
+After this, whenever you are developing, you simply need to activate your virtual env and then start the server
+
+```sh
+source .pyenv/bin/activate # activate virtualenv
+./bin/server               # start the server
+```
+
+The server will restart automatically whenever you edit a file.
+
+### Running
+
+To run in production, use [gunicorn](http://gunicorn.org/)
+
+```sh
+make                         # install
+gunicorn tribesat.server:app # run
 ```
 
 ### Database
