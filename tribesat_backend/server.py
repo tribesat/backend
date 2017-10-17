@@ -2,6 +2,7 @@
 """
 
 from flask import Flask  # type: ignore
+
 app = Flask(__name__)  # pylint: disable=invalid-name
 
 

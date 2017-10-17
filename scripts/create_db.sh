@@ -10,6 +10,3 @@ echo "
 echo "
     CREATE DATABASE tribesat;
 " | psql -U postgres
-
-./$(dirname "$0")/build.py
-

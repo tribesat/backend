@@ -3,7 +3,7 @@
 
 import unittest
 
-from tribesat.server import heartbeat
+from tribesat_backend.server import heartbeat
 
 
 class TestServer(unittest.TestCase):
