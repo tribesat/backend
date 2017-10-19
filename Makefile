@@ -4,7 +4,7 @@ $(error Please use virtualenv)
 endif
 endif
 
-PACKAGE_NAME := "tribesat"
+PACKAGE_NAME := "tribesat_backend"
 
 all: requirements
 	python setup.py install
@@ -20,7 +20,7 @@ test: requirements
 	make lint && make unit-test && make type-check && make style-review
 
 lint:
-	pylint tribesat
+	pylint $(PACKAGE_NAME)
 
 unit-test:
 	nosetests \
@@ -33,13 +33,18 @@ unit-test:
 		tests
 
 type-check:
-	mypy tribesat
+	mypy $(PACKAGE_NAME) \
+		--ignore-missing-imports
 
 setup-db:
-	./db/build.sh
+	./scripts/build.sh
 
 pretty:
-	yapf --in-place --recursive --parallel tribesat tests
+	yapf \
+		--in-place \
+		--recursive \
+		--parallel \
+		$(PACKAGE_NAME) tests
 
 style-review:
 	@output="$$(yapf --parallel --diff --recursive nodelib tests)"; \

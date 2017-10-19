@@ -2,7 +2,7 @@
 """Server script
 """
 
-from tribesat.server import app
+from tribesat_backend.server import app
 
 app.config['DEBUG'] = True
 
