@@ -37,7 +37,10 @@ type-check:
 		--ignore-missing-imports
 
 setup-db:
-	./scripts/build.sh
+	./scripts/create_db.sh
+
+populate-db:
+	python scripts/populate_db.py
 
 pretty:
 	yapf \

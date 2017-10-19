@@ -50,6 +50,12 @@ To set up the database install PostgreSQL and then run
 make setup-db
 ```
 
+To populate the database, run the above script and then run
+
+```sh
+make populate-db
+```
+
 There must be a user `postgres` in the database
 
 The database will be named `tribesat`
